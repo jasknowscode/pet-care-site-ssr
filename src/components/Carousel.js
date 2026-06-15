@@ -33,7 +33,7 @@ export default function Carousel() {
             />
           </div>
         ))}
-      </Slider>
+      </Slider >
     </div>
   );
 }
