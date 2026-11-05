@@ -1,18 +1,15 @@
 "use client"
 
-import { useEffect, useMemo, useRef } from "react";
-import { useLocation } from "react-router-dom";
-import Footer from "../components/Footer";
+import { useEffect, useRef, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import Footer from "@/components/Footer";
 
 
 function Contact() {
-  const location = useLocation();
+  const searchParams = useSearchParams();
   const containerRef = useRef(null);
   
-  const selectedService = useMemo(() => {
-    const params = new URLSearchParams(location.search);
-    return params.get("service") || "";
-  }, [location.search]);
+  const selectedService = searchParams.get("service") || "";
 
   useEffect(() => {
     // 1) Ensure widget config exists BEFORE app.js runs
@@ -125,4 +122,10 @@ const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   );
 }
 
-export default Contact;
+export default function ContactPage() {
+  return (
+    <Suspense fallback={null}>
+      <Contact />
+    </Suspense>
+  );
+}
