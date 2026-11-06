@@ -1,5 +1,3 @@
-import { MetadataRoute } from 'next'
-
 export default function robots() {
     return {
         rules: [
@@ -9,9 +7,9 @@ export default function robots() {
         },
         {
             userAgent: ['Applebot', 'Bingbot'],
-            disallow: ['/'],
+            allow: ['/'],
         },
     ],
-    sitemap: 'https://parkswalks.com/sitemap.js',
+    sitemap: 'https://parkswalks.com/sitemap.xml',
     }
 }

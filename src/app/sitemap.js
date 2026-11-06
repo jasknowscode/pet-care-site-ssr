@@ -1,5 +1,3 @@
-import { MetadataRoute } from 'next'
-
 export default function sitemap() {
     return [
         {
@@ -9,7 +7,7 @@ export default function sitemap() {
             priority: 1,
         },
         {
-            url: 'https://parkswalks.com/services',
+            url: 'https://parkswalks.com/#services',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
