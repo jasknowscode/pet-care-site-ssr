@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Carousel from "../components/Carousel.js";
-import ServiceAreaMap from "../components/ServiceAreaMap.js";
-import Reviews from "../components/Reviews";
-import Footer from "../components/Footer";
+import Carousel from "@/components/Carousel.js";
+import ServiceAreaMap from "@/components/ServiceAreaMap.js";
+import Reviews from "@/components/Reviews";
+import Footer from "@/components/Footer";
 
 const services = [
   {

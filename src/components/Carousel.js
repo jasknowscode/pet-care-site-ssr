@@ -1,3 +1,4 @@
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -6,8 +7,11 @@ export default function Carousel() {
     dots: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
     slidesToShow: 1,
-    slideToScroll: 4
+    slidesToScroll: 1
   };
 
   const images = [
@@ -20,18 +24,16 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="carousel">
-      <div>
+    <Slider {...settings}>
         {images.map((src, i) => (
           <div key={i}>
             <img
               src={src}
               alt={`Service slide ${i + 1}`}
-              className="slick-carousel"
+              className="carousel-image"
             />
           </div>
         ))}
-      </div>
-    </div>
+    </Slider>
   );
 }
