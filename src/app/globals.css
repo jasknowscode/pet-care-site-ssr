@@ -520,16 +520,18 @@ section + section {
 
 .about-img-container {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   flex: auto;
   gap: 22px;
 }
 
 .about-layout {
-  display: flex;
+  display: grid;
   gap: 22px;
-  padding: 18px;
-  align-items: start;
+  padding: 36px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
 }
 
 .about-photo {
@@ -542,6 +544,7 @@ section + section {
 .about-copy h2 {
   margin-top: 0;
   display: inline;
+  justify-items: center;
 }
 
 .about-highlights {
